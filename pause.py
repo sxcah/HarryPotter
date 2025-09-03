@@ -33,6 +33,5 @@ class Pause():
             f"Press \"ESC\" to return to menu!",
             (0, 0, 0),
             None,
-            (50 * -2 )
-            
+            (50 * -2)
         )
