@@ -1,6 +1,7 @@
 import pygame as py
 from support import *
 from assets import *
+from settings import *
 
 class Menu():
     def __init__(s):
@@ -8,16 +9,29 @@ class Menu():
         s.display_w = s.display_surface.get_width()
         s.display_h = s.display_surface.get_height()
         
-        s.font = load_font(font, font_size)
+        s.font = load_font(FONT, FONT_SIZE)
         
     def display(s):
-        s.display_surface.fill((255, 255, 255))
+        dim_overlay(
+            s.display_surface,
+            (255, 255, 255),
+            155
+        )
+
+        display_text(
+            s.display_surface,
+            s.font['med'],
+            f"Harry Potter\nand the\nPhilosopher's Stone",
+            (0, 0, 0),
+            (s.display_w // 2, s.display_h // 2 + (10 * -20)),
+            (55)
+        )
         
         display_text(
             s.display_surface,
             s.font['med'],
-            "Menu Screen\nPress \"Enter\" to play the Game!",
+            f"Press \"Enter\" to play the Game!",
             (0, 0, 0),
-            None,
+            (s.display_w // 2, s.display_h // 2 + (10 * 20)),
             55
         )

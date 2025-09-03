@@ -2,6 +2,7 @@ import pygame as py
 
 from support import *
 from assets import *
+from settings import *
 
 class Pause():
     def __init__(s):
@@ -9,7 +10,7 @@ class Pause():
         s.display_w = s.display_surface.get_width()
         s.display_h = s.display_surface.get_height()
         
-        s.font = load_font(font, font_size)
+        s.font = load_font(FONT, FONT_SIZE)
         
     def display(s):
         dim_overlay(

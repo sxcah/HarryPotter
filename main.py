@@ -23,7 +23,7 @@ class Main():
                         'victory': 'victory'
                         }
         
-        s.game_current_state = s.game_state['game']
+        s.game_current_state = s.game_state['menu']
 
         s.game = Game()
         s.menu = Menu()
@@ -41,6 +41,7 @@ class Main():
                     s.game_current_state = new_state
 
             if s.game_current_state == 'menu':
+                s.game.display()
                 s.menu.display()
             elif s.game_current_state == 'game':
                 s.game.display()
