@@ -6,7 +6,8 @@ from support import *
 from game_state_control import handle_game_state_event
 
 from game import Game
-
+from menu import Menu
+from pause import Pause
 
 py.init()
 
@@ -27,6 +28,8 @@ class Main():
         s.game_current_state = s.game_state['game']
 
         s.game = Game()
+        s.menu = Menu()
+        s.pause = Pause()
 
     def run(s):
         running = True
@@ -40,11 +43,12 @@ class Main():
                     s.game_current_state = new_state
 
             if s.game_current_state == 'menu':
-                display_surface.fill((255, 255, 255))
+                s.menu.display()
             elif s.game_current_state == 'game':
                 s.game.display()
             elif s.game_current_state == 'pause':
-                display_surface.fill((155, 155, 155))
+                s.game.display()
+                s.pause.display()
             else:
                 pass
 

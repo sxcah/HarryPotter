@@ -1,7 +1,7 @@
 To Do:
 
-Menu UI.
-Pause UI.
+Menu UI. (WIP)
+Pause UI. (WIP)
 Game Play UI.
 Load Sprites.
 
