@@ -10,11 +10,9 @@ from menu import Menu
 from pause import Pause
 
 py.init()
-
-display_surface = py.display.set_mode((0, 0), py.RESIZABLE)
-
 class Main():
-    def __init__(s):
+    def __init__(s):        
+        s.display_surface = py.display.set_mode((0, 0), py.RESIZABLE)
         s.clock = py.time.Clock()
 
         s.game_state = {
